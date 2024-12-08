@@ -4,10 +4,8 @@
 
 body {
   font-family: var(--fs-base);
-  font-size: var(--fs-small);
-  background-color: var(--clr-background);
+  font-size: var(--fs-s);
   color: var(--clr-text);
-  margin: 0;
 }
 
 h1,
@@ -23,29 +21,31 @@ h6,
 .h5,
 .h6 {
   font-family: var(--ff-secondary);
-  padding-inline: var(--space-s);
 }
 
 h1,
 .h1 {
-  font-size: var(--fs-3xl);
-  padding-top: var(--space-l);
+  font-size: var(--fs-2xl);
 }
 
 h2,
 .h2 {
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-xl);
 }
 
 h3,
 .h3 {
-  font-size: var(--fs-extra-large);
+  font-size: var(--fs-l);
+}
+
+h4,
+.h4 {
+  font-size: var(--fs-m);
 }
 
 p {
-  padding-inline: var(--space-s);
+  font-size: var(--fs-s);
   max-width: 75ch;
   line-height: 1.5;
 }
-
 

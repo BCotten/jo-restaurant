@@ -1,0 +1,53 @@
+// media queries
+$phonePortrait: em(384);
+$tabletLandscape: em(1024);
+
+:root {
+  // font-family
+  --ff-base: "Oswald", sans-serif; // font weight 200 to 700
+  --ff-secondary: "Bowlby One"; // font weight only 400
+
+  // font-sizing
+  --fs-3xs: 0.75rem; // 12px
+  --fs-2xs: 0.875rem; // 14px
+  --fs-xs: 1rem; // 16px
+  --fs-s: 1.125rem; // 18px
+  --fs-m: 1.25rem; // 20px
+  --fs-l: 1.5rem; // 24px
+  --fs-xl: 2rem; // 32px
+  --fs-2xl: 2.5rem; // 40px
+
+  // colors
+  --clr-text: #000000;
+  --clr-primary: #ee4a1e;
+  --clr-secondary: #f6f2f0;
+  --clr-accent: #eef866;
+  --clr-neutral: #ffffff;
+}
+
+// media queries font sizing
+@media (min-width: 24em) {
+  :root {
+    --fs-3xs: 1.1rem; // 17.6px
+    --fs-2xs: 0.9375rem; // 15px
+    // --fs-xs: 1rem 16px no change
+    --fs-s: 1.3125rem; // 21px
+    // --fs-m: 1.25rem 20px no change
+    // --fs-l: 1.5rem 24px one changes other do not so left alone
+    --fs-xl: 3rem; // 48px
+    --fs-2xl: 4.375rem; // 70px
+  }
+}
+
+@media (min-width: 64em) {
+  :root {
+    --fs-3xs: 1.5rem; // 24px
+    --fs-2xs: 1rem; // 16px
+    // --fs-xs: 1rem 16px no change
+    --fs-s: 1.5rem; // 24px
+    // --fs-m: 1.25rem 20px no change
+    // --fs-l: 1.5rem 24px one changes other do not so left alone
+    --fs-xl: 4.5rem; // 72px
+    --fs-2xl: 6.875rem; // 110px
+  }
+}

@@ -1,0 +1,8 @@
+@use "variables" as *;
+
+// Media Query Mixin
+@mixin mq($w) {
+  @media (min-width: $w) {
+    @content;
+  }
+}
