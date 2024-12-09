@@ -445,4 +445,73 @@ p {
   font-size: 14px;
 }
 
+.navigation {
+  background-color: var(--clr-primary);
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1.25rem;
+  padding-bottom: 0.9375rem;
+}
+@media (min-width: 90em) {
+  .navigation {
+    padding-inline: 3.125rem;
+  }
+}
+.navigation [hidden] {
+  display: none;
+}
+.navigation .logo {
+  width: 5.6875rem;
+  height: 1.5rem;
+  margin-top: 1.3125rem;
+}
+@media (min-width: 90em) {
+  .navigation .logo {
+    margin-top: 2.125rem;
+  }
+}
+.navigation button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  margin-top: 1.0625rem;
+}
+.navigation ul {
+  position: absolute;
+  background-color: var(--clr-primary);
+  left: 0;
+  top: 4.75rem;
+  height: calc(100vh - 4.75rem);
+  width: 100vw;
+  padding-top: 1.9375rem;
+  padding-inline-start: 0;
+  margin-top: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 90em) {
+  .navigation ul {
+    position: static;
+    padding-top: 2rem;
+    height: fit-content;
+    flex-direction: row;
+    max-width: fit-content;
+  }
+}
+.navigation a {
+  color: var(--clr-text);
+  font-size: var(--fs-l);
+  font-family: var(--ff-base);
+  text-decoration: none;
+  font-weight: 600;
+}
+.navigation .smiley-logo {
+  width: 9.1875rem;
+  padding-top: 2rem;
+}
+
 /*# sourceMappingURL=styles.css.map */

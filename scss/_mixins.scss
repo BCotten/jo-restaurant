@@ -6,3 +6,19 @@
     @content;
   }
 }
+
+@mixin mobilePadding {
+  padding-inline: 1.25rem;
+}
+
+@mixin desktopPadding {
+  padding-inline: 3.125rem;
+}
+
+@mixin links {
+  color: var(--clr-text);
+  font-size: var(--fs-l);
+  font-family: var(--ff-base);
+  text-decoration: none;
+  font-weight: 600;
+}
