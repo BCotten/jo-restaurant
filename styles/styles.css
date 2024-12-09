@@ -376,14 +376,14 @@ video {
 :root {
   --ff-base: "Oswald", sans-serif;
   --ff-secondary: "Bowlby One";
-  --fs-3xs: 0.75rem;
-  --fs-2xs: 0.875rem;
+  --fs-3xs: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);
+  --fs-2xs: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
   --fs-xs: 1rem;
-  --fs-s: 1.125rem;
+  --fs-s: clamp(1.125rem, 0.923rem + 0.5634vw, 1.5rem);
   --fs-m: 1.25rem;
   --fs-l: 1.5rem;
-  --fs-xl: 2rem;
-  --fs-2xl: 2.5rem;
+  --fs-xl: clamp(2rem, 1.1197rem + 3.7559vw, 4.5rem);
+  --fs-2xl: clamp(2.5rem, 0.9595rem + 6.5728vw, 6.875rem);
   --clr-text: #000000;
   --clr-primary: #ee4a1e;
   --clr-secondary: #f6f2f0;
@@ -391,27 +391,8 @@ video {
   --clr-neutral: #ffffff;
 }
 
-@media (min-width: 24em) {
-  :root {
-    --fs-3xs: 1.1rem;
-    --fs-2xs: 0.9375rem;
-    --fs-s: 1.3125rem;
-    --fs-xl: 3rem;
-    --fs-2xl: 4.375rem;
-  }
-}
-@media (min-width: 64em) {
-  :root {
-    --fs-3xs: 1.5rem;
-    --fs-2xs: 1rem;
-    --fs-s: 1.5rem;
-    --fs-xl: 4.5rem;
-    --fs-2xl: 6.875rem;
-  }
-}
 body {
   font-family: var(--fs-base);
-  font-size: var(--fs-s);
   color: var(--clr-text);
 }
 
@@ -454,6 +435,14 @@ p {
   font-size: var(--fs-s);
   max-width: 75ch;
   line-height: 1.5;
+}
+
+.two-xs {
+  font-size: var(--fs-2xs);
+}
+
+.test {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=styles.css.map */
