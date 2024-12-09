@@ -14,14 +14,51 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script rel="script" src="script/main.js" defer></script>
     <title>JO's Restaurant</title>
   </head>
   <body>
     <div id="skip">
       <a href="#site-main">Skip to content</a>
     </div>
-    <header>
-      <nav></nav>
+    <header class="navigation">
+      <img class="logo" src="images/jo-logo.svg" alt="Restaurant logo JO'S" />
+      <nav>
+        <button class="btn-open" aria-expanded="false" aria-controls="nav-list">
+          <img
+            class="btn-nav img-open"
+            src="images/sec_0_nav-hamburger-menu-vector.svg"
+            alt="hamburger menu click to open navigation"
+          />
+          <img
+            hidden
+            class="btn-nav img-close"
+            src="images/sec_0_nav-close-vector.svg"
+            alt="hamburger menu click to close navigation"
+          />
+        </button>
+        <ul id="nav-list" hidden>
+          <li>
+            <a href="#section_2_we_are_jo">About</a>
+          </li>
+          <li>
+            <a href="#section_4_our_burgers">Menu</a>
+          </li>
+          <li>
+            <a href="#section_6_some_reviews">Reviews</a>
+          </li>
+          <li>
+            <a href="#section_7_instagram">Socials</a>
+          </li>
+          <li>
+            <img
+              class="smiley-logo"
+              src="images/sec_1_voted-logo.svg"
+              alt="Voted peoples favorite burger new york around a smiley face"
+            />
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section id="section_1_hero">
