@@ -515,4 +515,179 @@ p {
   padding-top: 2rem;
 }
 
+footer {
+  background-color: var(--clr-primary);
+  padding-inline: 1.25rem;
+}
+@media (min-width: 90em) {
+  footer {
+    padding-inline: 3.125rem;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas: "subscribe nav-list" "email-form nav-list" "legal-list nav-list";
+  }
+  footer .subscribe {
+    grid-area: subscribe;
+  }
+  footer .email-form {
+    grid-area: email-form;
+  }
+  footer .nav-list {
+    grid-area: nav-list;
+  }
+  footer .legal-list {
+    grid-area: legal-list;
+  }
+}
+footer img {
+  width: 7.625rem;
+}
+@media (min-width: 90em) {
+  footer img {
+    width: 19.25rem;
+  }
+}
+footer .subscribe {
+  padding-top: 4rem;
+  margin-bottom: 1.5rem;
+  max-width: 37.5rem;
+}
+@media (min-width: 90em) {
+  footer .subscribe {
+    padding-top: 8.625rem;
+  }
+}
+footer h2 {
+  font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+@media (min-width: 90em) {
+  footer h2 {
+    margin-top: 2.5625rem;
+  }
+}
+footer p {
+  font-size: var(--fs-2xs);
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+footer .email-form {
+  font-family: var(--ff-base);
+  margin-bottom: 4rem;
+}
+@media (min-width: 90em) {
+  footer .email-form {
+    margin-bottom: 5rem;
+  }
+}
+footer .email-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  gap: 1rem;
+}
+@media (min-width: 90em) {
+  footer .email-form form {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+footer .email-form .email-input {
+  border: 0.0625rem solid var(--clr-text);
+  width: 20.9375rem;
+  height: 3.6875rem;
+  text-align: center;
+  background-color: inherit;
+}
+@media (min-width: 90em) {
+  footer .email-form .email-input {
+    text-align: left;
+    width: 25.875rem;
+  }
+}
+footer .email-form .email-input::placeholder {
+  color: var(--clr-text);
+}
+@media (min-width: 90em) {
+  footer .email-form .email-input::placeholder {
+    padding-inline-start: 1rem;
+  }
+}
+footer .email-form .btn-form {
+  background-color: var(--clr-text);
+  border: none;
+  text-transform: uppercase;
+  color: var(--clr-neutral);
+  font-size: var(--fs-m);
+  font-weight: 600;
+  padding: 1rem 4rem;
+  width: 20.875rem;
+}
+@media (min-width: 90em) {
+  footer .email-form .btn-form {
+    padding: 1rem 1rem;
+    width: 8.1875rem;
+    height: 3.6875rem;
+  }
+}
+footer ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+footer .nav-list {
+  margin-bottom: 4rem;
+}
+@media (min-width: 90em) {
+  footer .nav-list {
+    padding-top: 12.0625rem;
+    margin-bottom: 0;
+  }
+}
+footer .nav-list ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 90em) {
+  footer .nav-list ul {
+    flex-direction: row;
+  }
+}
+footer .nav-list a {
+  color: var(--clr-text);
+  font-size: var(--fs-l);
+  font-family: var(--ff-base);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+}
+footer .legal-list {
+  padding-bottom: 3rem;
+}
+footer .legal-list ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+@media (min-width: 90em) {
+  footer .legal-list ul {
+    justify-content: flex-start;
+  }
+}
+footer .legal-list a {
+  color: var(--clr-text);
+  font-size: var(--fs-l);
+  font-family: var(--ff-base);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--2xs);
+}
+
 /*# sourceMappingURL=styles.css.map */
