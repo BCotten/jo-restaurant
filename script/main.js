@@ -2,7 +2,7 @@ console.log("js loading...");
 
 const navButtonOpen = document.querySelector(".btn-open");
 const navList = document.querySelector("#nav-list");
-const smileyLogo = document.querySelector(".smiley-logo");
+const smileyLogo = document.querySelector(".smiley-logo-list");
 const imgOpen = document.querySelector(".img-open");
 const imgClose = document.querySelector(".img-close");
 
