@@ -1,2 +1,155 @@
 @use "variables" as *;
 @use "mixins" as *;
+
+footer {
+  background-color: var(--clr-primary);
+  @include mobilePadding;
+  @include mq($desktop) {
+    @include desktopPadding;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas:
+      "subscribe nav-list"
+      "email-form nav-list"
+      "legal-list nav-list";
+
+    .subscribe {
+      grid-area: subscribe;
+    }
+    .email-form {
+      grid-area: email-form;
+    }
+    .nav-list {
+      grid-area: nav-list;
+    }
+    .legal-list {
+      grid-area: legal-list;
+    }
+  }
+
+  img {
+    width: 7.625rem;
+    @include mq($desktop) {
+      width: 19.25rem;
+    }
+  }
+
+  .subscribe {
+    padding-top: 4rem;
+    margin-bottom: 1.5rem;
+    max-width: 37.5rem;
+    @include mq($desktop) {
+      padding-top: 8.625rem;
+    }
+  }
+
+  h2 {
+    font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    @include mq($desktop) {
+      margin-top: 2.5625rem;
+    }
+  }
+
+  p {
+    font-size: var(--fs-2xs);
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .email-form {
+    font-family: var(--ff-base);
+    margin-bottom: 4rem;
+    @include mq($desktop) {
+      margin-bottom: 5rem;
+    }
+
+    form {
+      @include flex-col-center;
+      gap: 1rem;
+      @include mq($desktop) {
+        flex-direction: row;
+        gap: 0;
+      }
+    }
+
+    .email-input {
+      border: 0.0625rem solid var(--clr-text);
+      width: 20.9375rem;
+      height: 3.6875rem;
+      text-align: center;
+      background-color: inherit;
+      @include mq($desktop) {
+        text-align: left;
+        width: 25.875rem;
+      }
+    }
+
+    .email-input::placeholder {
+      color: var(--clr-text);
+      @include mq($desktop) {
+        padding-inline-start: 1rem;
+      }
+    }
+
+    .btn-form {
+      background-color: var(--clr-text);
+      border: none;
+      text-transform: uppercase;
+      color: var(--clr-neutral);
+      font-size: var(--fs-m);
+      font-weight: 600;
+      padding: 1rem 4rem;
+      width: 20.875rem;
+      @include mq($desktop) {
+        padding: 1rem 1rem;
+        width: 8.1875rem;
+        height: 3.6875rem;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin: 0;
+  }
+
+  .nav-list {
+    margin-bottom: 4rem;
+    @include mq($desktop) {
+      padding-top: 12.0625rem;
+      margin-bottom: 0;
+    }
+    ul {
+      @include flex-col-center;
+      @include mq($desktop) {
+        flex-direction: row;
+      }
+    }
+
+    a {
+      @include links;
+    }
+  }
+
+  .legal-list {
+    padding-bottom: 3rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      @include mq($desktop) {
+        justify-content: flex-start;
+      }
+    }
+
+    a {
+      @include links;
+      font-size: var(--2xs);
+    }
+  }
+}
