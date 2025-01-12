@@ -9,7 +9,8 @@
 #skip a {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -23,7 +24,8 @@
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  clip-path: none;
+  -webkit-clip-path: none;
+          clip-path: none;
   color: #21759b;
   display: block;
   font-size: 0.875rem;
@@ -112,7 +114,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -394,7 +397,6 @@ video {
 body {
   font-family: var(--fs-base);
   color: var(--clr-text);
-  background-color: var(--clr-secondary);
 }
 
 h1,
@@ -498,8 +500,10 @@ p {
   .navigation ul {
     position: static;
     padding-top: 2rem;
+    height: -moz-fit-content;
     height: fit-content;
     flex-direction: row;
+    max-width: -moz-fit-content;
     max-width: fit-content;
   }
 }
@@ -516,16 +520,10 @@ p {
   padding-top: 2rem;
 }
 
-.our-burger-title-p-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 1fr;
-  padding-right: 1.25rem;
-}
-
 .burger-card-container {
   display: grid;
-  column-gap: 1rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
   width: 21rem;
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -594,16 +592,10 @@ p {
   .burger-card-container {
     grid-template-columns: repeat(2, 21rem);
   }
-  .our-burger-title-p-container {
-    width: 48rem;
-  }
 }
-@media (min-width: 90em) {
+@media (min-width: 80em) {
   .burger-card-container {
     grid-template-columns: repeat(4, 21rem);
-  }
-  .our-burger-title-p-container {
-    width: fit-content;
   }
 }
 footer {
@@ -700,10 +692,16 @@ footer .email-form .email-input {
     width: 25.875rem;
   }
 }
+footer .email-form .email-input::-moz-placeholder {
+  color: var(--clr-text);
+}
 footer .email-form .email-input::placeholder {
   color: var(--clr-text);
 }
 @media (min-width: 90em) {
+  footer .email-form .email-input::-moz-placeholder {
+    padding-inline-start: 1rem;
+  }
   footer .email-form .email-input::placeholder {
     padding-inline-start: 1rem;
   }
@@ -779,6 +777,4 @@ footer .legal-list a {
   text-decoration: none;
   font-weight: 600;
   font-size: var(--2xs);
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
