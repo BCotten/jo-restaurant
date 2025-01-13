@@ -1,2 +1,26 @@
 @use "variables" as *;
 @use "mixins" as *;
+
+
+.banner {
+    background-color: var(--clr-accent);
+}
+
+.banner-on-top {
+    transform: rotate(-2.71deg);
+}
+
+.banner-underneath {
+    transform: rotate(2.66deg);
+}
+
+.banner p {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    font-weight:500;
+}
+
+.orange-star {
+    width: 1.35rem;
+    height: 1.35rem;
+}
