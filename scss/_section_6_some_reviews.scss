@@ -1,2 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
+
+.review-card {
+    background-color: var(--clr-neutral);
+}
