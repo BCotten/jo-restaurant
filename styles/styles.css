@@ -392,7 +392,7 @@ video {
 }
 
 body {
-  font-family: var(--fs-base);
+  font-family: var(--ff-base);
   color: var(--clr-text);
   background-color: var(--clr-secondary);
 }
@@ -489,6 +489,7 @@ p {
   padding-inline-start: 0;
   margin-top: 0;
   list-style: none;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -516,177 +517,150 @@ p {
   padding-top: 2rem;
 }
 
-.header-primary {
-  font-family: var(--ff-secondary);
-  font-size: var(--fs-xl);
-  line-height: 1;
-  letter-spacing: -0.01em;
+.we-are-jo-section {
+  padding-inline: 1.25rem;
+}
+@media (min-width: 24em) {
+  .we-are-jo-section {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 90em) {
+  .we-are-jo-section {
+    padding-inline: 3.125rem;
+  }
+}
+.we-are-jo-section h2 {
   color: var(--clr-primary);
-  text-align: left;
-  width: 60.625rem;
-  height: auto;
-  margin-left: 1.25rem;
-  position: relative;
-  z-index: 2;
-  font-weight: normal;
+  margin: 0;
 }
-
-.image-caption-container {
-  width: 40rem;
-  margin: -13rem 0 4rem 45rem;
-  display: flex;
-  flex-direction: column;
-  gap: var(--fs-2xs);
+@media (min-width: 90em) {
+  .we-are-jo-section h2 {
+    letter-spacing: -0.045rem;
+  }
 }
-
-.image-kitchen {
-  width: 40rem;
-  height: 26.595rem;
-  object-fit: cover;
-  margin-right: 1.25rem;
+.we-are-jo-section p {
+  color: var(--clr-primary);
 }
-
-.image-caption {
-  font-family: var(--ff-base);
-  font-size: var(--fs-s);
-  color: var(--clr-text);
+@media (min-width: 90em) {
+  .we-are-jo-section .header-primary {
+    width: 60.625rem;
+    position: relative;
+    z-index: 2;
+  }
+}
+@media (min-width: 90em) {
+  .we-are-jo-section .image-kitchen {
+    width: 40rem;
+    object-fit: cover;
+  }
+}
+.we-are-jo-section .image-caption-container {
+  margin-top: 2rem;
+}
+@media (min-width: 90em) {
+  .we-are-jo-section .image-caption-container {
+    width: 40rem;
+    margin: -11.5rem 0 0 43.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--fs-2xs);
+  }
+}
+.we-are-jo-section .image-caption {
+  font-size: var(--fs-3xs);
   text-align: center;
-  width: 24.8125rem;
-  margin: 0 auto;
+}
+@media (min-width: 90em) {
+  .we-are-jo-section .image-text-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 12.5rem;
+  }
+}
+@media (min-width: 90em) {
+  .we-are-jo-section .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--fs-2xs);
+    margin-left: 9rem;
+  }
+}
+@media (min-width: 90em) {
+  .we-are-jo-section .image-open {
+    object-fit: cover;
+    display: block;
+  }
 }
 
-.image-text-container {
+/* .image-caption-container { not wrong just moved to use sass @include
+width: 40rem;
+margin: -11.5rem 0 0 43.5rem;
+display: flex;
+flex-direction: column;
+gap: var(--fs-2xs);
+} */
+/* .image-kitchen {
+width: 40rem;
+height: 26.595rem; messing up mobile view needs to be off for now
+object-fit: cover;
+margin-right: 1.25rem;
+} */
+/* .image-caption {
+font-family: var(--ff-base);
+font-size: var(--fs-s);
+color: var(--clr-text);
+text-align: center;
+/ width: 24.8125rem;
+margin: 0 auto;
+} */
+/* .image-text-container {
   width: 81.3125rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 40rem 31.3125rem;
+  grid-template-columns: 1fr 1fr;
   gap: var(--fs-2xs);
   margin-left: 1.25rem;
-}
-
-.image-open {
+} */
+/* .image-open {
   width: 40rem;
   height: 40rem;
   object-fit: cover;
   display: block;
-}
-
-.text-container {
-  width: 31.3125rem;
+} */
+/* .text-container {
+  // width: 31.3125rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--fs-2xs);
-  margin-top: 10rem;
-  margin-left: 7.5rem;
-}
-
-.header-secondary {
-  font-family: var(--ff-secondary);
-  font-size: var(--fs-xl);
-  line-height: 1;
-  letter-spacing: -0.01em;
-  color: var(--clr-primary);
-  text-align: left;
-  width: 31.3125rem;
-  margin: 0;
+  margin-left: 9rem;
+  // margin-top: 10rem; off for now
+  // margin-left: 7.5rem; off for now
+} */
+/* .header-secondary {
+  // font-family: var(--ff-secondary);
+  // font-size: var(--fs-xl);
+  // line-height: 1;
+  // letter-spacing: -0.045rem;
+  // color: var(--clr-primary);
+  // text-align: left;
+  // width: 31.3125rem;
+  // margin: 0;
   font-weight: normal;
-}
-
-.description-text {
-  font-family: var(--ff-base);
-  font-size: var(--fs-l);
-  line-height: 1.5;
-  letter-spacing: 0;
+} */
+/* .description-text {
+  // font-family: var(--ff-base);
+  // font-size: var(--fs-l);
+  // line-height: 1.5;
+  // letter-spacing: 0;
   color: var(--clr-primary);
   text-align: left;
-  width: 30rem;
+  // width: 30rem;
   margin: 0;
-}
-
-@media (max-width: 45em) {
-  .we-are-jo-section {
-    width: 90%;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    margin: 0 auto;
-  }
-  .header-primary {
-    width: 100%;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    margin: 1rem auto;
-    font-size: var(--fs-m);
-    text-align: left;
-  }
-  .image-caption-container {
-    width: 100%;
-    margin: 1rem auto;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .image-kitchen {
-    width: 100%;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    height: auto;
-  }
-  .image-caption {
-    font-size: var(--fs-xs);
-    text-align: center;
-    width: 100%;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-  }
-  .image-open {
-    width: 100%;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    max-width: 48rem;
-    height: auto;
-    margin: 1rem auto;
-  }
-  .text-container {
-    width: 100%;
-    margin: 1rem 0;
-    font-size: var(--fs-xs);
-    text-align: left;
-  }
-  .header-secondary {
-    font-size: var(--fs-s);
-    line-height: 1;
-    margin-bottom: 1rem;
-    text-align: left;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-  }
-  .description-text {
-    font-size: var(--fs-m);
-    line-height: 1.4;
-    text-align: left;
-    width: 90%;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-  }
-  .image-text-container {
-    width: 90%;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-    margin: 1rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4rem;
-  }
-}
-.text-container h2,
-.text-container p {
-  text-align: left;
-  margin: 0;
-}
-
+} */
 .our-burger-title-p-container {
   display: grid;
   grid-template-columns: 1fr;

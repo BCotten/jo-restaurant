@@ -1,183 +1,259 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.header-primary {
-    font-family: var(--ff-secondary);
-    font-size: var(--fs-xl);
-    line-height: 1;
-    letter-spacing: -0.01em;
+.we-are-jo-section {
+  @include mobilePadding;
+  @include mq($phonePortrait) {
+    margin: 0 auto;
+  }
+  @include mq($desktop) {
+    @include desktopPadding;
+  }
+
+  h2 {
     color: var(--clr-primary);
-    text-align: left;
-    width: 60.625rem;
-    height: auto;
-    margin-left: 1.25rem;
-    position: relative;
-    z-index: 2;
-    font-weight: normal;
+    margin: 0;
+    @include mq($desktop) {
+      letter-spacing: -0.045rem;
+    }
+  }
+
+  p {
+    color: var(--clr-primary);
+  }
+
+  .header-primary {
+    @include mq($desktop) {
+      width: 60.625rem;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .image-kitchen {
+    @include mq($desktop) {
+      width: 40rem;
+      object-fit: cover;
+    }
+  }
+
+  .image-caption-container {
+    margin-top: 2rem;
+    @include mq($desktop) {
+      width: 40rem;
+      margin: -11.5rem 0 0 43.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: var(--fs-2xs);
+    }
+  }
+
+  .image-caption {
+    font-size: var(--fs-3xs);
+    text-align: center;
+  }
+
+  .image-text-container {
+    @include mq($desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      margin-top: 12.5rem;
+    }
+  }
+
+  .text-container {
+    @include mq($desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: var(--fs-2xs);
+      margin-left: 9rem;
+    }
+  }
+
+  .image-open {
+    @include mq($desktop) {
+      object-fit: cover;
+      display: block;
+    }
+  }
 }
 
-.image-caption-container {
+//width: 90%;
+// margin-left: 1.25rem;
+// margin-right: 1.25rem;
+// margin: 0 auto; overriding margin-left and margin-right which made width 90% needed for the section
+
+// .header-primary {
+// all done in h2 or global styles
+//margin: 0;
+// width: 100%;
+// margin-left: 1.25rem;
+// margin-right: 1.25rem;
+// margin: 1rem auto;
+// font-size: var(--fs-m);
+// text-align: left; default is left
+// }
+
+//.image-kitchen {
+//width: 100%; in css reset
+// margin-left: 1.25rem; done with mobile padding
+// margin-right: 1.25rem; done with mobile padding
+// height: auto; default is auto
+// }
+
+// .image-caption-container {
+// margin-top: 2rem;
+// width: 100%; in css reset
+// margin: 1rem auto;
+// display: flex; column is default
+// flex-direction: column;
+// align-items: center;
+// }
+
+// .image-caption {
+// font-size: var(--fs-3xs); // had wrong size here was s?
+// text-align: center;
+// width: 100%; in css reset
+// margin-left: 1.25rem; done with mobile padding
+// margin-right: 1.25rem; done with mobile padding
+//}
+
+// .image-open {
+// width: 100%; in css reset
+// margin-left: 1.25rem;
+// margin-right: 1.25rem;
+// max-width: 48rem; not needed when mobile first
+// height: auto; default
+// margin: 1rem auto;
+//}
+
+//.text-container {
+// width: 100%;
+// margin: 1rem 0;
+// font-size: var(--fs-xs);
+// text-align: left;
+//}
+
+//@media (min-width: 45em) {
+  //.we-are-jo-section {
+    // .header-secondary {
+    //font-size: var(--fs-s);
+    // line-height: 1;
+    // margin-bottom: 1rem;
+    // text-align: left;
+    // margin-left: 1.25rem;
+    // margin-right: 1.25rem;
+    // }
+
+    // .description-text {
+    // font-size: var(--fs-m);
+    // line-height: 1.4;
+    // text-align: left;
+    // width: 90%;
+    // margin-left: 1.25rem;
+    // margin-right: 1.25rem;
+    //  }
+
+    // .image-text-container {
+    // width: 90%;
+    // margin-left: 1.25rem;
+    // margin-right: 1.25rem;
+    // margin: 1rem auto;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // margin-top: 12.5rem;
+    // }
+
+    // .header-primary {
+    // font-family: var(--ff-secondary);
+    // font-size: var(--fs-xl);
+    // line-height: 1;
+    // letter-spacing: -0.045rem;
+    // color: var(--clr-primary);
+    // text-align: left;
+    // width: 60.625rem;
+    // height: auto;
+    // margin-left: 1.25rem;
+    // position: relative;
+    // z-index: 2;
+    // font-weight: normal;
+    // }
+
+    /* .image-caption-container { not wrong just moved to use sass @include
     width: 40rem;
-    margin: -13rem 0 4rem 45rem;
+    margin: -11.5rem 0 0 43.5rem;
     display: flex;
     flex-direction: column;
     gap: var(--fs-2xs);
-}
+    } */
 
-.image-kitchen {
+    /* .image-kitchen {
     width: 40rem;
-    height: 26.595rem;
+    height: 26.595rem; messing up mobile view needs to be off for now
     object-fit: cover;
     margin-right: 1.25rem;
-}
+    } */
 
-.image-caption {
+    /* .image-caption {
     font-family: var(--ff-base);
     font-size: var(--fs-s);
     color: var(--clr-text);
     text-align: center;
-    width: 24.8125rem;
+    / width: 24.8125rem;
     margin: 0 auto;
-}
+    } */
 
-.image-text-container {
-    width: 81.3125rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 40rem 31.3125rem;
-    gap: var(--fs-2xs);
-    margin-left: 1.25rem;
-}
+    /* .image-text-container {
+      width: 81.3125rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--fs-2xs);
+      margin-left: 1.25rem;
+    } */
 
-.image-open {
-    width: 40rem;
-    height: 40rem;
-    object-fit: cover;
-    display: block;
-}
+    /* .image-open {
+      width: 40rem;
+      height: 40rem;
+      object-fit: cover;
+      display: block;
+    } */
 
-.text-container {
-    width: 31.3125rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: var(--fs-2xs);
-    margin-top: 10rem;
-    margin-left: 7.5rem;
-}
+    /* .text-container {
+      // width: 31.3125rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: var(--fs-2xs);
+      margin-left: 9rem;
+      // margin-top: 10rem; off for now
+      // margin-left: 7.5rem; off for now
+    } */
 
-.header-secondary {
-    font-family: var(--ff-secondary);
-    font-size: var(--fs-xl);
-    line-height: 1;
-    letter-spacing: -0.01em;
-    color: var(--clr-primary);
-    text-align: left;
-    width: 31.3125rem;
-    margin: 0;
-    font-weight: normal;
-}
+    /* .header-secondary {
+      // font-family: var(--ff-secondary);
+      // font-size: var(--fs-xl);
+      // line-height: 1;
+      // letter-spacing: -0.045rem;
+      // color: var(--clr-primary);
+      // text-align: left;
+      // width: 31.3125rem;
+      // margin: 0;
+      font-weight: normal;
+    } */
 
-.description-text {
-    font-family: var(--ff-base);
-    font-size: var(--fs-l);
-    line-height: 1.5;
-    letter-spacing: 0;
-    color: var(--clr-primary);
-    text-align: left;
-    width: 30rem;
-    margin: 0;
-}
-
-@media (max-width: 45em) {
-    .we-are-jo-section {
-        width: 90%;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-        margin: 0 auto;
-    }
-
-    .header-primary {
-        width: 100%;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-        margin: 1rem auto;
-        font-size: var(--fs-m);
-        text-align: left;
-    }
-
-    .image-caption-container {
-        width: 100%;
-        margin: 1rem auto;
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-kitchen {
-        width: 100%;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-        height: auto;
-    }
-
-    .image-caption {
-        font-size: var(--fs-xs);
-        text-align: center;
-        width: 100%;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-    }
-
-    .image-open {
-        width: 100%;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-        max-width: 48rem;
-        height: auto;
-        margin: 1rem auto;
-    }
-
-    .text-container {
-        width: 100%;
-        margin: 1rem 0;
-        font-size: var(--fs-xs);
-        text-align: left;
-    }
-
-    .header-secondary {
-        font-size: var(--fs-s);
-        line-height: 1;
-        margin-bottom: 1rem;
-        text-align: left;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-    }
-
-    .description-text {
-        font-size: var(--fs-m);
-        line-height: 1.4;
-        text-align: left;
-        width: 90%;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-    }
-
-    .image-text-container {
-        width: 90%;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-        margin: 1rem auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 4rem;
-    }
-}
-
-.text-container h2,
-.text-container p {
-    text-align: left;
-    margin: 0;
-}
+    /* .description-text {
+      // font-family: var(--ff-base);
+      // font-size: var(--fs-l);
+      // line-height: 1.5;
+      // letter-spacing: 0;
+      color: var(--clr-primary);
+      text-align: left;
+      // width: 30rem;
+      margin: 0;
+    } */
+  //}
+//}
