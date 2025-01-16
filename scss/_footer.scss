@@ -4,6 +4,7 @@
 footer {
   background-color: var(--clr-primary);
   @include mobilePadding;
+
   @include mq($desktop) {
     @include desktopPadding;
     display: grid;
@@ -39,8 +40,12 @@ footer {
     padding-top: 4rem;
     margin-bottom: 1.5rem;
     max-width: 37.5rem;
+    @include mq($phonePortrait) {
+      margin-inline: auto;
+    }
     @include mq($desktop) {
       padding-top: 8.625rem;
+      margin-inline: 0;
     }
   }
 
