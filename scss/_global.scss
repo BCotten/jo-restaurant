@@ -26,16 +26,19 @@ h6,
 h1,
 .h1 {
   font-size: var(--fs-2xl);
+  text-transform: uppercase;
 }
 
 h2,
 .h2 {
   font-size: var(--fs-xl);
+  text-transform: uppercase;
 }
 
 h3,
 .h3 {
   font-size: var(--fs-l);
+  text-transform: uppercase;
 }
 
 h4,
