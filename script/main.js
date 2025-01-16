@@ -40,3 +40,29 @@ function showNav(width) {
     navList.hidden = true;
   }
 }
+
+const loadMoreCards1 = document.getElementById("load-more-cards-1");
+const loadMoreCards2 = document.getElementById("load-more-cards-2");
+const loadMoreBtn = document.getElementById("load-btn")
+
+
+loadMoreBtn.addEventListener("click", function() {
+
+    if ( loadMoreCards1.style.display == "none" &&          loadMoreCards2.style.display == "none") {
+        loadMoreCards1.style.display = "block";
+        loadMoreCards2.style.display = "block";
+        loadMoreBtn.innerText = ("SHOW LESS");
+    } 
+    else 
+    {   
+  
+        loadMoreCards1.style.display = "none";
+        loadMoreCards2.style.display = "none";
+        loadMoreBtn.innerHTML = "LOAD MORE" }
+})
+
+
+
+
+
+

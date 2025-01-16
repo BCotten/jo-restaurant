@@ -3,8 +3,8 @@
 
 
 .banner {
-    background-color: var(--clr-accent);
-    
+    background-color: var(--clr-accent);  
+    text-wrap: nowrap;
 }
 
 .banner-on-top {
@@ -18,10 +18,11 @@
 .banner p {
     display: inline-block;
     font-size: var(--fs-xs);
-    font-weight:500;
+    font-weight: 500;
+    color: var(--clr-primary);
 }
 
 .orange-star {
-    width: 1.35rem;
-    height: 1.35rem;
+    width: 1rem;
+    height: 1rem;
 }
