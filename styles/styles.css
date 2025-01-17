@@ -527,13 +527,12 @@ p {
 .burger-card-container {
   display: grid;
   column-gap: 1rem;
-  width: 21rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-  margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .burger-card {
+  max-width: 21rem;
+  width: 99%;
   background-color: var(--clr-neutral);
   margin-top: 2.5rem;
 }
@@ -547,7 +546,7 @@ p {
 .new-star-img {
   position: absolute;
   grid-column: 1;
-  row-column: 1;
+  grid-row: 1;
   z-index: 1;
   right: 0.5rem;
   top: -3rem;
@@ -559,19 +558,22 @@ p {
 }
 
 .our-burger-img {
-  width: 21rem;
+  max-width: 21rem;
   height: 21rem;
 }
 
 .our-burger-h2 {
   color: var(--clr-primary);
-  padding-inline: 1.25rem;
+  width: 22rem;
   margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: 1.25rem;
 }
 
 h3 {
   text-align: center;
-  margin-bottom: 0.75;
+  margin-bottom: 0.75rem;
 }
 
 .our-burger-p {
@@ -579,8 +581,8 @@ h3 {
   font-size: var(--fs-s);
   color: var(--clr-primary);
   padding-inline: 1.25rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto 0 auto;
+  width: 22rem;
 }
 
 .burger-card p {
@@ -596,7 +598,19 @@ h3 {
     grid-template-columns: repeat(2, 21rem);
   }
   .our-burger-title-p-container {
-    width: 48rem;
+    width: 40rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .our-burger-h2 {
+    width: 40rem;
+    max-width: 100%;
+  }
+  .our-burger-p {
+    width: 40rem;
+    max-width: 100%;
   }
 }
 @media (min-width: 90em) {
@@ -607,17 +621,25 @@ h3 {
     width: fit-content;
   }
 }
+#section_5_banners {
+  margin-top: 8rem;
+}
+
 .banner {
   background-color: var(--clr-accent);
   text-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
 }
 
 .banner-on-top {
   transform: rotate(-2.71deg);
+  margin-top: 3rem;
 }
 
 .banner-underneath {
   transform: rotate(2.66deg);
+  margin-bottom: 3rem;
 }
 
 .banner p {
@@ -651,7 +673,7 @@ h3 {
 .review-paragraph {
   font-size: var(--fs-xs);
   padding-left: 3rem;
-  padding-right: 0.2rem;
+  padding-right: 1rem;
   margin-bottom: 0;
   position: absolute;
   margin-top: 0;
@@ -660,34 +682,68 @@ h3 {
 
 .some-reviews-h2 {
   color: var(--clr-primary);
-  margin-left: 1.25rem;
+  width: 22rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .some-reviews-p {
   color: var(--clr-primary);
-  width: 21rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-  margin-bottom: 0;
+  width: 22rem;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .review-card {
   background-color: var(--clr-neutral);
   padding-left: 1.25rem;
+  width: 22rem;
+  max-width: 98%;
+  margin-left: auto;
+  margin-right: auto;
   align-items: start;
   position: relative;
+}
+
+.review-grid-container {
+  justify-content: center;
+  display: grid;
+  width: 22rem;
+  max-width: 98%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 9.4rem 12.4rem 12.4rem 3.4rem 9.4rem 8rem;
+  grid-gap: 1rem;
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  grid-template-areas: "uideli" "andreea" "mathew" "load-more-button" "jessica" "we-love";
 }
 
 .uideli {
   grid-area: uideli;
 }
 
+.uideli2 {
+  grid-area: uideli2;
+}
+
 .jessica {
   grid-area: jessica;
 }
 
+.jessica2 {
+  grid-area: jessica2;
+}
+
 .we-love {
   grid-area: we-love;
+}
+
+.we-love2 {
+  grid-area: we-love2;
 }
 
 .andreea {
@@ -706,17 +762,12 @@ h3 {
   grid-area: load-more-button;
 }
 
-.review-grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 9.4rem 12.4rem 12.4rem 3.4rem 9.4rem 8rem;
-  grid-gap: 1rem;
-  width: 21rem;
-  margin-top: 4rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-  margin-bottom: 3rem;
-  grid-template-areas: "uideli" "andreea" "mathew" "load-more-button" "jessica" "we-love";
+.uideli2, .jessica, .jessica2, .we-love2, .maria, .we-love {
+  display: none;
+}
+
+.jessica {
+  margin-top: 1rem;
 }
 
 .load-more-button {
@@ -724,7 +775,13 @@ h3 {
   font-size: var(--fs-m);
   font-weight: 500;
   border-radius: 0;
+  margin-top: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
   border: 0.1rem solid #000000;
+  width: 22rem;
+  height: 3.5rem;
+  max-width: 98%;
 }
 
 .load-more-button:hover {
@@ -746,26 +803,42 @@ h3 {
 }
 
 @media (min-width: 45em) {
+  .some-reviews-h2 {
+    width: 40rem;
+  }
+  .some-reviews-p {
+    width: 40rem;
+    margin: 0 auto 0 auto;
+  }
   .review-grid-container {
-    grid-template-columns: 28rem 28rem 28rem;
+    grid-template-columns: 22rem 22rem 22rem;
     grid-template-rows: 12rem 12rem 12rem;
     grid-gap: 1rem;
-    grid-template-areas: "uideli, andreea, mathew" "jessica maria we-love" "we-love jessica uideli";
+    grid-template-areas: "uideli andreea mathew" "jessica maria we-love2" "we-love jessica2 uideli2";
+  }
+  .uideli2, .jessica, .jessica2, .we-love, .we-love2, .maria {
+    display: block;
+  }
+  .load-more-button {
+    display: none;
+  }
+  #load-more-cards-1 {
+    display: block;
+  }
+  #load-more-cards-2 {
+    display: block;
   }
 }
 @media (min-width: 90em) {
   .some-reviews-p {
     color: var(--clr-primary);
-    width: fit-content;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
     margin-bottom: 0;
   }
   .review-grid-container {
-    grid-template-columns: 28rem 28rem 28rem;
+    grid-template-columns: 22rem 22rem 22rem;
     grid-template-rows: 12rem 12rem 12rem;
     grid-gap: 1rem;
-    grid-template-areas: "uideli, andreea, mathew" "jessica maria we-love" "we-love jessica uideli";
+    grid-template-areas: "uideli andreea mathew" "jessica maria we-love2" "we-love jessica2 uideli2";
   }
   .load-more-button {
     display: none;

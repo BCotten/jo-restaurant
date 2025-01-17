@@ -1,18 +1,25 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+#section_5_banners {
+    margin-top: 8rem;
+}
 
 .banner {
     background-color: var(--clr-accent);  
     text-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
 }
 
 .banner-on-top {
     transform: rotate(-2.71deg);
+    margin-top: 3rem;
 }
 
 .banner-underneath {
     transform: rotate(2.66deg);
+    margin-bottom: 3rem;
 }
 
 .banner p {
