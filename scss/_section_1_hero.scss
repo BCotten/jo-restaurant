@@ -13,7 +13,13 @@
   header {
     max-width: 90rem;
     margin: 0 auto;
+    @include mq($phonePortrait) {
+      width: 70%;
+      margin: 0 auto;
+    }
     @include mq($desktop) {
+      width: 100%;
+      margin: 0;
       display: grid;
       grid-template-columns: 60% 1fr;
       grid-template-areas:
@@ -26,7 +32,6 @@
   h1 {
     margin: 0;
     padding: 3.125rem 0 0 0;
-    text-transform: uppercase;
     max-width: 50rem;
     @include mq($desktop) {
       padding-top: 6.25rem;

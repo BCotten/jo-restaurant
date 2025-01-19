@@ -1,2 +1,56 @@
 @use "variables" as *;
 @use "mixins" as *;
+
+.section_7_instagram {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  @include mq($tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+
+  img:first-child {
+    display: none;
+    @include mq($phonePortrait) {
+      display: inline;
+      margin: 0;
+    }
+  }
+
+  img:last-of-type {
+    object-fit: cover;
+    display: none;
+    @include mq($phonePortrait) {
+      display: inline;
+    }
+    @include mq($desktop) {
+      display: none;
+    }
+  }
+
+  img {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  div {
+    background-color: var(--clr-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq($desktopSmall) {
+      grid-column: 2 / -1;
+    }
+    @include mq($desktop) {
+      grid-column: auto;
+    }
+  }
+
+  p {
+    max-width: fit-content;
+    font-size: clamp(1.75rem, 1.5rem + 1.25vw, 2.625rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+  }
+}
