@@ -1,17 +1,132 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.review-img {
+.section_6_some_reviews {
+  @include mobilePadding;
+  @include mq($desktop) {
+    @include desktopPadding;
+  }
+
+  h2 {
+    color: var(--clr-primary);
+    margin: 3.125rem 0 0 0;
+  }
+
+  .review-paragraph {
+    color: var(--clr-primary);
+    margin: 1rem 0 0 0;
+  }
+
+  .review-grid-container {
+    margin: 3.9375rem 0 4rem 0;
+    columns: 27.1875rem;
+    column-gap: .75rem;
+
+    @include mq($desktop) {
+      margin: 3.75rem 0 9.6875rem 0;
+    }
+  }
+
+  .review-card {
+    background-color: var(--clr-neutral);
+    margin-top: .75rem;
+    break-inside: avoid;
+  }
+
+  .set-1 {
+    display: none;
+    @include mq($phonePortrait) {
+      display: block;
+    }
+  }
+
+  .set-2 {
+    display: none;
+    @include mq($phonePortrait) {
+      display: block;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 2.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .icon-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      margin: 1.25rem 0 0 1.25rem;
+      @include mq($desktop) {
+        margin: 1.5rem 0 0 1.5rem;
+      }
+    }
+
+    p {
+      font-size: clamp(0.875rem, 0.7679rem + 0.5357vw, 1.25rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 1.5625rem 0 0 1rem;
+      width: fit-content;
+      @include mq($desktop) {
+        margin: 2.0625rem 0 0 1.0625rem;
+      }
+    }
+  }
+
+  .review-text {
+    margin: 0.75rem 0 0 4.25rem;
+    padding-bottom: 1.25rem;
+    font-size: 1rem;
+    @include mq($desktop) {
+      margin: 1rem 0 0 5.5625rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  button {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: var(--fs-m);
+    font-weight: 600;
+    background-color: var(--clr-secondary);
+    width: 100%;
+    padding: 0.75rem 4rem;
+    @include mq($phonePortrait) {
+      display: none;
+    }
+  }
+
+  button:hover {
+    background-color: var(--clr-text);
+    color: var(--clr-neutral);
+    cursor: pointer;
+  }
+}
+
+/* .review-img {
   margin-top: 1.25rem;
   width: 2rem;
   height: 2rem;
 }
+
 .review-card .review-handle {
-  display: inline;
+  // display: inline;
   font-size: var(--fs-2xs);
   font-weight: 500;
   margin: 0;
-  position: absolute;
+  // position: absolute;
   padding-top: 1.6rem;
   padding-left: 1rem;
 }
@@ -21,7 +136,7 @@
   padding-left: 3rem;
   padding-right: 1rem;
   margin-bottom: 0;
-  position: absolute;
+  // position: absolute;
   margin-top: 0;
   top: 3.5rem;
 }
@@ -210,3 +325,4 @@
     display: none;
   }
 }
+ */
