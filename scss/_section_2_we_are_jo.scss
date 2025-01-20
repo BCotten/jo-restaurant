@@ -33,12 +33,6 @@
 
   .header-secondary {
     margin-top: 2rem;
-    @include mq($phonePortrait) {
-      text-align: center;
-    }
-    @include mq($desktop) {
-      text-align: left;
-    }
   }
 
   .image-kitchen {
@@ -54,9 +48,6 @@
 
   .description-text {
     margin: 1rem 0 0 0;
-    @include mq($phonePortrait) {
-      margin: 1rem auto 0;
-    }
   }
 
   .image-caption-container {
@@ -87,6 +78,8 @@
   }
 
   .text-container {
+    max-width: 50rem;
+    margin-inline: auto;
     @include mq($desktop) {
       display: flex;
       flex-direction: column;

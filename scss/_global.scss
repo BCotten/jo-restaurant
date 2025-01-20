@@ -6,6 +6,7 @@ body {
   font-family: var(--ff-base);
   color: var(--clr-text);
   background-color: var(--clr-secondary);
+  overflow-x: hidden;
 }
 
 h1,
