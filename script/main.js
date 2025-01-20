@@ -50,8 +50,6 @@ function showNav(width) {
 let reviewCount = 0;
 
 reviewBtn.addEventListener("click", function () {
-  console.log("clicked");
-
   if (reviewCount === 0) {
     reviewCount = reviewCount + 1;
     set_1.forEach((item) => {
@@ -74,3 +72,16 @@ reviewBtn.addEventListener("click", function () {
     });
   }
 });
+
+function showNav(width) {
+  if (width >= 448) {
+    set_1.forEach((item) => {
+      item.style.display = "block";
+      item.classList = " review-card fade-in";
+    });
+    set_2.forEach((item) => {
+      item.style.display = "block";
+      item.classList = "review-card fade-in";
+    });
+  }
+}

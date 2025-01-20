@@ -2,14 +2,16 @@
 @use "mixins" as *;
 
 .section_6_some_reviews {
+  margin: 3.125rem 0 0 0;
   @include mobilePadding;
   @include mq($desktop) {
     @include desktopPadding;
+    margin: 6.4375rem 0 0 0;
   }
 
   h2 {
     color: var(--clr-primary);
-    margin: 3.125rem 0 0 0;
+    margin: 0;
   }
 
   .review-paragraph {
@@ -20,7 +22,7 @@
   .review-grid-container {
     margin: 3.9375rem 0 4rem 0;
     columns: 27.1875rem;
-    column-gap: .75rem;
+    column-gap: 0.75rem;
 
     @include mq($desktop) {
       margin: 3.75rem 0 9.6875rem 0;
@@ -29,8 +31,10 @@
 
   .review-card {
     background-color: var(--clr-neutral);
-    margin-top: .75rem;
+    margin-top: 0.75rem;
+    margin-inline: auto;
     break-inside: avoid;
+    max-width: 27.1875rem;
   }
 
   .set-1 {
@@ -59,7 +63,6 @@
       opacity: 1;
     }
   }
-
 
   .icon-title-container {
     display: flex;

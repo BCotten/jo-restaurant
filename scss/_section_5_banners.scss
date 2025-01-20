@@ -1,27 +1,84 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+.section_5_banners {
+  margin-top: 3.125rem;
+  @include mq($desktop) {
+    margin-top: 7.75rem;
+  }
 
-.banner {
+  .banner-on-top {
+    transform: rotate(-2.71deg);
+  }
+
+  .banner-underneath {
+    position: relative;
+    transform: rotate(2.66deg);
+    bottom: 1.5rem;
+    @include mq($desktop) {
+      bottom: 2.9rem;
+    }
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     background-color: var(--clr-accent);
-    
+    text-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
+    height: 3rem;
+    @include mq($tablet) {
+      height: 3.5rem;
+    }
+    @include mq($desktop) {
+      height: 4.5rem;
+    }
+  }
+
+  p {
+    display: inline-block;
+    font-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    margin: 0;
+  }
+
+  img {
+    width: 1.3125rem;
+    @include mq($desktop) {
+      width: 2rem;
+    }
+  }
 }
 
-.banner-on-top {
-    transform: rotate(-2.71deg);
+/* .banner {
+  background-color: var(--clr-accent);
+  text-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+} */
+
+/* .banner-on-top {
+  transform: rotate(-2.71deg);
+  margin-top: 3rem;
 }
 
 .banner-underneath {
-    transform: rotate(2.66deg);
+  transform: rotate(2.66deg);
+  margin-bottom: 3rem;
 }
-
-.banner p {
-    display: inline-block;
-    font-size: var(--fs-xs);
-    font-weight:500;
+ */
+/* .banner p {
+  display: inline-block;
+  font-size: var(--fs-xs); 1rem to 1.5rem at desktop
+  font-weight: 500; --> 600
+  color: var(--clr-primary);
 }
-
-.orange-star {
-    width: 1.35rem;
-    height: 1.35rem;
-}
+ */
+/* .orange-star {
+  width: 1rem; wrong size for mobile and desktop
+  height: 1rem;
+} */
