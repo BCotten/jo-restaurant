@@ -1,6 +1,8 @@
 // media queries
-$phonePortrait: em(384);
-$tabletLandscape: em(1024);
+$phonePortrait: 28em;
+$tablet: 48em;
+$desktopSmall: 73.125em;
+$desktop: 90em;
 
 :root {
   // font-family
@@ -8,14 +10,14 @@ $tabletLandscape: em(1024);
   --ff-secondary: "Bowlby One"; // font weight only 400
 
   // font-sizing
-  --fs-3xs: 0.75rem; // 12px
-  --fs-2xs: 0.875rem; // 14px
-  --fs-xs: 1rem; // 16px
-  --fs-s: 1.125rem; // 18px
-  --fs-m: 1.25rem; // 20px
-  --fs-l: 1.5rem; // 24px
-  --fs-xl: 2rem; // 32px
-  --fs-2xl: 2.5rem; // 40px
+  --fs-3xs: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem); // 12px to 24px
+  --fs-2xs: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem); // 14px to 16px
+  --fs-xs: 1rem; // 16px -- no change
+  --fs-s: clamp(1.125rem, 0.923rem + 0.5634vw, 1.5rem); // 18px to 24px
+  --fs-m: 1.25rem; // 20px -- no change
+  --fs-l: 1.5rem; // 24px -- no change
+  --fs-xl: clamp(2rem, 1.1197rem + 3.7559vw, 4.5rem); // 32px to 72px
+  --fs-2xl: clamp(2.5rem, 0.9595rem + 6.5728vw, 6.875rem); // 40px to 110px
 
   // colors
   --clr-text: #000000;
@@ -23,31 +25,4 @@ $tabletLandscape: em(1024);
   --clr-secondary: #f6f2f0;
   --clr-accent: #eef866;
   --clr-neutral: #ffffff;
-}
-
-// media queries font sizing
-@media (min-width: 24em) {
-  :root {
-    --fs-3xs: 1.1rem; // 17.6px
-    --fs-2xs: 0.9375rem; // 15px
-    // --fs-xs: 1rem 16px no change
-    --fs-s: 1.3125rem; // 21px
-    // --fs-m: 1.25rem 20px no change
-    // --fs-l: 1.5rem 24px one changes other do not so left alone
-    --fs-xl: 3rem; // 48px
-    --fs-2xl: 4.375rem; // 70px
-  }
-}
-
-@media (min-width: 64em) {
-  :root {
-    --fs-3xs: 1.5rem; // 24px
-    --fs-2xs: 1rem; // 16px
-    // --fs-xs: 1rem 16px no change
-    --fs-s: 1.5rem; // 24px
-    // --fs-m: 1.25rem 20px no change
-    // --fs-l: 1.5rem 24px one changes other do not so left alone
-    --fs-xl: 4.5rem; // 72px
-    --fs-2xl: 6.875rem; // 110px
-  }
 }

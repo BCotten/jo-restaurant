@@ -3,9 +3,10 @@
 // Global css here
 
 body {
-  font-family: var(--fs-base);
-  font-size: var(--fs-s);
+  font-family: var(--ff-base);
   color: var(--clr-text);
+  background-color: var(--clr-secondary);
+  overflow-x: hidden;
 }
 
 h1,
@@ -26,16 +27,19 @@ h6,
 h1,
 .h1 {
   font-size: var(--fs-2xl);
+  text-transform: uppercase;
 }
 
 h2,
 .h2 {
   font-size: var(--fs-xl);
+  text-transform: uppercase;
 }
 
 h3,
 .h3 {
   font-size: var(--fs-l);
+  text-transform: uppercase;
 }
 
 h4,
@@ -49,3 +53,10 @@ p {
   line-height: 1.5;
 }
 
+.two-xs {
+  font-size: var(--fs-2xs);
+}
+
+.test {
+  font-size: 14px;
+}

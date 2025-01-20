@@ -6,3 +6,27 @@
     @content;
   }
 }
+
+@mixin mobilePadding {
+  padding-inline: 1.25rem;
+}
+
+@mixin desktopPadding {
+  padding-inline: 3.125rem;
+}
+
+@mixin links {
+  color: var(--clr-text);
+  font-size: var(--fs-l);
+  font-family: var(--ff-base);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
