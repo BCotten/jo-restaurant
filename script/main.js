@@ -18,6 +18,7 @@ showNav(innerWidth);
 window.addEventListener("resize", function () {
   const innerWidth = window.innerWidth;
   showNav(innerWidth);
+  showReviews(innerWidth);
 });
 
 navButtonOpen.addEventListener("click", function () {
@@ -73,7 +74,7 @@ reviewBtn.addEventListener("click", function () {
   }
 });
 
-function showNav(width) {
+function showReviews(width) {
   if (width >= 448) {
     set_1.forEach((item) => {
       item.style.display = "block";
