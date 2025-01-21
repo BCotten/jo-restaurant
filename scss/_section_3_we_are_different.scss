@@ -15,6 +15,15 @@
     z-index: 1;
     position: relative;
     margin-top: 1rem;
+    @include mq($phonePortrait) {
+        width: 375px;
+        height: 375px;
+        margin: 0 auto;
+    }
+    @include mq($desktop) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .image-text-container-different {
@@ -35,6 +44,13 @@
         font-size: var(--fs-xl);
         margin: 0;
         letter-spacing: -0.045rem;
+        text-transform: uppercase;
+        @include mq($phonePortrait) {
+            font-size: 2.5rem;
+        }
+        @include mq($desktop) {
+            font-size: 40px;
+        }
     }
 
     .play-button {
@@ -44,9 +60,17 @@
         display: flex;
         align-items: center;
 
-        img {
-            width: 80px;
-            height: 80px;
+    img {
+        width: 80px;
+        height: 80px;
+        @include mq($phonePortrait) {
+            width: 60px;
+            height: 60px;
+        }
+            @include mq($desktop) {
+                width: 80px;
+                height: 80px;
+            }
         }
     }
 }
@@ -59,9 +83,15 @@
     pointer-events: none;
     transform: rotate(-2.66deg);
 
-        img {
-            width: 100px;
-            height: auto;
+    img {
+        width: 100px;
+        height: auto;
+        @include mq($phonePortrait) {
+        width: 80px;
+    }
+            @include mq($desktop) {
+                width: 100px;
+            }
         }
     }
 }
