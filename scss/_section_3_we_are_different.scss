@@ -1,2 +1,102 @@
 @use "variables" as *;
 @use "mixins" as *;
+
+.section_3_we-are-different {
+  margin: 4rem 0 0 0;
+  position: relative;
+  @include mq($desktop) {
+    margin: 12.5625rem 0 0 0;
+  }
+
+  .img-small {
+    width: 100%;
+    @include mq($tablet) {
+      display: none;
+    }
+  }
+
+  .img-large {
+    display: none;
+    width: 100%;
+    @include mq($tablet) {
+      display: inline;
+    }
+  }
+
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mq($desktop) {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+
+  p {
+    width: 12.25rem;
+    margin: 0;
+    color: var(--clr-neutral);
+    font-family: var(--ff-secondary);
+    font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+    text-transform: uppercase;
+    text-align: center;
+    @include mq($tablet) {
+      width: 16.25rem;
+    }
+    @include mq($desktop) {
+      width: fit-content;
+    }
+  }
+
+  button {
+    margin-top: .75rem;
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    @include mq($desktop) {
+      margin-top: 0;
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+
+  .play-button {
+    width: 4rem;
+    @include mq($tablet) {
+      width: 4.5rem;
+    }
+    @include mq($desktop) {
+      width: 5rem;
+    }
+  }
+
+  .organic-icon {
+    position: absolute;
+    width: 7.5rem;
+    transform: rotate(-3.659deg);
+    top: 88%;
+    left: 5.5%;
+    @include mq($phonePortrait) {
+      width: 8rem;
+      top: 90%;
+      left: 3.5%;
+    }
+    @include mq($tablet) {
+      width: 9rem;
+      top: 90%;
+      left: 3.5%;
+    }
+    @include mq($desktop) {
+      width: 11.125rem;
+      top: 92%;
+      left: 2%;
+    }
+  }
+}

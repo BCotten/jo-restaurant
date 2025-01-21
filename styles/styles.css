@@ -4,7 +4,6 @@
   <div id="skip">
     <a href="#site-main">Skip to content</a>
   </div>
-
 */
 #skip a {
   border: 0;
@@ -442,14 +441,6 @@ p {
   line-height: 1.5;
 }
 
-.two-xs {
-  font-size: var(--fs-2xs);
-}
-
-.test {
-  font-size: 14px;
-}
-
 .navigation {
   background-color: var(--clr-primary);
   display: flex;
@@ -744,74 +735,125 @@ p {
   }
 }
 
-/* .image-caption-container { not wrong just moved to use sass @include
-    width: 40rem;
-    margin: -11.5rem 0 0 43.5rem;
+.section_3_we-are-different {
+  margin: 4rem 0 0 0;
+  position: relative;
+}
+@media (min-width: 90em) {
+  .section_3_we-are-different {
+    margin: 12.5625rem 0 0 0;
+  }
+}
+.section_3_we-are-different .img-small {
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .section_3_we-are-different .img-small {
+    display: none;
+  }
+}
+.section_3_we-are-different .img-large {
+  display: none;
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .section_3_we-are-different .img-large {
+    display: inline;
+  }
+}
+.section_3_we-are-different div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 90em) {
+  .section_3_we-are-different div {
     display: flex;
-    flex-direction: column;
-    gap: var(--fs-2xs);
-    } */
-/* .image-kitchen {
-    width: 40rem;
-    height: 26.595rem; messing up mobile view needs to be off for now
-    object-fit: cover;
-    margin-right: 1.25rem;
-    } */
-/* .image-caption {
-    font-family: var(--ff-base);
-    font-size: var(--fs-s);
-    color: var(--clr-text);
-    text-align: center;
-    / width: 24.8125rem;
-    margin: 0 auto;
-    } */
-/* .image-text-container {
-      width: 81.3125rem;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--fs-2xs);
-      margin-left: 1.25rem;
-    } */
-/* .image-open {
-      width: 40rem;
-      height: 40rem;
-      object-fit: cover;
-      display: block;
-    } */
-/* .text-container {
-      // width: 31.3125rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: var(--fs-2xs);
-      margin-left: 9rem;
-      // margin-top: 10rem; off for now
-      // margin-left: 7.5rem; off for now
-    } */
-/* .header-secondary {
-      // font-family: var(--ff-secondary);
-      // font-size: var(--fs-xl);
-      // line-height: 1;
-      // letter-spacing: -0.045rem;
-      // color: var(--clr-primary);
-      // text-align: left;
-      // width: 31.3125rem;
-      // margin: 0;
-      font-weight: normal;
-    } */
-/* .description-text {
-      // font-family: var(--ff-base);
-      // font-size: var(--fs-l);
-      // line-height: 1.5;
-      // letter-spacing: 0;
-      color: var(--clr-primary);
-      text-align: left;
-      // width: 30rem;
-      margin: 0;
-    } */
+    gap: 1rem;
+    align-items: center;
+  }
+}
+.section_3_we-are-different p {
+  width: 12.25rem;
+  margin: 0;
+  color: var(--clr-neutral);
+  font-family: var(--ff-secondary);
+  font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .section_3_we-are-different p {
+    width: 16.25rem;
+  }
+}
+@media (min-width: 90em) {
+  .section_3_we-are-different p {
+    width: fit-content;
+  }
+}
+.section_3_we-are-different button {
+  margin-top: 0.75rem;
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+@media (min-width: 90em) {
+  .section_3_we-are-different button {
+    margin-top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+}
+.section_3_we-are-different .play-button {
+  width: 4rem;
+}
+@media (min-width: 48em) {
+  .section_3_we-are-different .play-button {
+    width: 4.5rem;
+  }
+}
+@media (min-width: 90em) {
+  .section_3_we-are-different .play-button {
+    width: 5rem;
+  }
+}
+.section_3_we-are-different .organic-icon {
+  position: absolute;
+  width: 7.5rem;
+  transform: rotate(-3.659deg);
+  top: 88%;
+  left: 5.5%;
+}
+@media (min-width: 28em) {
+  .section_3_we-are-different .organic-icon {
+    width: 8rem;
+    top: 90%;
+    left: 3.5%;
+  }
+}
+@media (min-width: 48em) {
+  .section_3_we-are-different .organic-icon {
+    width: 9rem;
+    top: 90%;
+    left: 3.5%;
+  }
+}
+@media (min-width: 90em) {
+  .section_3_we-are-different .organic-icon {
+    width: 11.125rem;
+    top: 92%;
+    left: 2%;
+  }
+}
+
 .section_4_our_burgers {
-  margin: 2.5rem 0 0 0;
+  margin: 5rem 0 0 0;
   padding-inline: 1.25rem;
 }
 @media (min-width: 90em) {
@@ -875,76 +917,6 @@ p {
   width: 100%;
 }
 
-/* .our-burger-title-p-container {
-    display: grid; just default not needed.
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr;
-    // padding-right: 1.25rem;
-  } */
-/* .burger-card {
-  background-color: var(--clr-neutral);
-  margin-top: 2.5rem;
-} */
-/* .img-stack {
-  // display: grid; col is default
-  // grid-template-columns: 1fr;
- // position: relative;
-} */
-/* .new-star-img {
-  position: absolute;
-  grid-column: 1;
-  // row-column: 1; unknown property
-  z-index: 1;
-  right: 0.5rem;
-  top: -3rem;
-} */
-/* .img-bottom {
-  grid-column: 1;
-  grid-row: 1;
-} */
-/* .our-burger-img {
-  width: 100%;
-  //height: 21rem;
-}
- */
-/* .our-burger-h2 { h2 via sass nesting
-  color: var(--clr-primary);
-  @include mobilePadding;
-  margin-bottom: 1rem;
-} */
-/* .our-burger-p {
-  font-family: var(--ff-base); in global
-  font-size: var(--fs-s); in global
-  color: var(--clr-primary); in global
-  @include mobilePadding; in section
-  margin-top: 0;
-  margin-bottom: 0;
-} */
-/* .burger-card p {
-  // color: var(--clr-text);
-  // text-align: center;
-  padding-bottom: 1.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
- */
-/* @media (min-width: 45em) {
-  .burger-card-container {
-    grid-template-columns: repeat(2, 21rem);
-  }
-
-  /* .our-burger-title-p-container {
-    width: 48rem; in our-burger-p now to max width 50rem no mq needed
-  } */
-/* @media (min-width: 90em) {
-  .burger-card-container {
-    grid-template-columns: repeat(4, 21rem);
-  }
-
-  .our-burger-title-p-container {
-    width: fit-content;
-  }
-} * */
 .section_5_banners {
   margin-top: 3.125rem;
 }
@@ -1003,33 +975,6 @@ p {
   }
 }
 
-/* .banner {
-  background-color: var(--clr-accent);
-  text-wrap: nowrap;
-  width: 100%;
-  overflow: hidden;
-} */
-/* .banner-on-top {
-  transform: rotate(-2.71deg);
-  margin-top: 3rem;
-}
-
-.banner-underneath {
-  transform: rotate(2.66deg);
-  margin-bottom: 3rem;
-}
- */
-/* .banner p {
-  display: inline-block;
-  font-size: var(--fs-xs); 1rem to 1.5rem at desktop
-  font-weight: 500; --> 600
-  color: var(--clr-primary);
-}
- */
-/* .orange-star {
-  width: 1rem; wrong size for mobile and desktop
-  height: 1rem;
-} */
 .section_6_some_reviews {
   margin: 3.125rem 0 0 0;
   padding-inline: 1.25rem;
@@ -1148,217 +1093,6 @@ p {
   cursor: pointer;
 }
 
-/* .review-img {
-  margin-top: 1.25rem;
-  width: 2rem;
-  height: 2rem;
-}
-
-.review-card .review-handle {
-  // display: inline;
-  font-size: var(--fs-2xs);
-  font-weight: 500;
-  margin: 0;
-  // position: absolute;
-  padding-top: 1.6rem;
-  padding-left: 1rem;
-}
-
-.review-paragraph {
-  font-size: var(--fs-xs);
-  padding-left: 3rem;
-  padding-right: 1rem;
-  margin-bottom: 0;
-  // position: absolute;
-  margin-top: 0;
-  top: 3.5rem;
-}
-
-.some-reviews-h2 {
-  color: var(--clr-primary);
-  width: 22rem;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.some-reviews-p {
-  color: var(--clr-primary);
-  width: 22rem;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.review-card {
-  background-color: var(--clr-neutral);
-  padding-left: 1.25rem;
-  width: 22rem;
-  max-width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: start;
-  position: relative;
-}
-
-.review-grid-container {
-  justify-content: center;
-  display: grid;
-  width: 22rem;
-  max-width: 98%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 9.4rem 12.4rem 12.4rem 3.4rem 9.4rem 8rem;
-  grid-gap: 1rem;
-  margin-top: 4rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3rem;
-  grid-template-areas:
-    "uideli"
-    "andreea"
-    "mathew"
-    "load-more-button"
-    "jessica"
-    "we-love";
-}
-
-.uideli {
-  grid-area: uideli;
-}
-.uideli2 {
-  grid-area: uideli2;
-}
-.jessica {
-  grid-area: jessica;
-}
-.jessica2 {
-  grid-area: jessica2;
-}
-.we-love {
-  grid-area: we-love;
-}
-.we-love2 {
-  grid-area: we-love2;
-}
-.andreea {
-  grid-area: andreea;
-}
-.maria {
-  grid-area: maria;
-}
-.mathew {
-  grid-area: mathew;
-}
-.load-more-button {
-  grid-area: load-more-button;
-}
-
-.uideli2,
-.jessica,
-.jessica2,
-.we-love2,
-.maria,
-.we-love {
-  display: none;
-}
-
-.jessica {
-  margin-top: 1rem;
-}
-
-.load-more-button {
-  font-family: var(--ff-base);
-  font-size: var(--fs-m);
-  font-weight: 500;
-  border-radius: 0;
-  margin-top: 1.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  border: 0.1rem solid #000000;
-  width: 22rem;
-  height: 3.5rem;
-  max-width: 98%;
-}
-
-.load-more-button:hover {
-  background-color: #000000;
-  color: var(--clr-secondary);
-}
-
-.load-more-button:active {
-  box-shadow: 0.5rem 0.5rem 1.75rem 0.1rem #0000003d;
-  transform: translateY(0.25rem);
-}
-
-#load-more-cards-1 {
-  display: none;
-}
-
-#load-more-cards-2 {
-  display: none;
-}
-
-@media (min-width: 45em) {
-  .some-reviews-h2 {
-    width: 40rem;
-  }
-
-  .some-reviews-p {
-    width: 40rem;
-    margin: 0 auto 0 auto;
-  }
-
-  .review-grid-container {
-    grid-template-columns: 22rem 22rem 22rem;
-    grid-template-rows: 12rem 12rem 12rem;
-    grid-gap: 1rem;
-    grid-template-areas:
-      "uideli andreea mathew"
-      "jessica maria we-love2"
-      "we-love jessica2 uideli2";
-  }
-
-  .uideli2,
-  .jessica,
-  .jessica2,
-  .we-love,
-  .we-love2,
-  .maria {
-    display: block;
-  }
-
-  .load-more-button {
-    display: none;
-  }
-  #load-more-cards-1 {
-    display: block;
-  }
-
-  #load-more-cards-2 {
-    display: block;
-  }
-}
-
-@media (min-width: 90em) {
-  .some-reviews-p {
-    color: var(--clr-primary);
-    margin-bottom: 0;
-  }
-  .review-grid-container {
-    grid-template-columns: 22rem 22rem 22rem;
-    grid-template-rows: 12rem 12rem 12rem;
-    grid-gap: 1rem;
-    grid-template-areas:
-      "uideli andreea mathew"
-      "jessica maria we-love2"
-      "we-love jessica2 uideli2";
-  }
-
-  .load-more-button {
-    display: none;
-  }
-}
- */
 .section_7_instagram {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
