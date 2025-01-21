@@ -4,7 +4,6 @@
   <div id="skip">
     <a href="#site-main">Skip to content</a>
   </div>
-
 */
 #skip a {
   border: 0;
@@ -810,6 +809,64 @@ p {
       // width: 30rem;
       margin: 0;
     } */
+.we-are-different-section {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  overflow: hidden;
+  margin-top: 10rem;
+}
+.we-are-different-section .image-kitchen-different {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  position: relative;
+  margin-top: 1rem;
+}
+.we-are-different-section .image-text-container-different {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: var(--fs-2xs);
+  text-align: center;
+  width: 80%;
+  max-width: 805px;
+  z-index: 2;
+}
+.we-are-different-section .image-text-container-different h2 {
+  color: var(--clr-neutral);
+  font-size: var(--fs-xl);
+  margin: 0;
+  letter-spacing: -0.045rem;
+}
+.we-are-different-section .image-text-container-different .play-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.we-are-different-section .image-text-container-different .play-button img {
+  width: 80px;
+  height: 80px;
+}
+.we-are-different-section .organic-icon {
+  position: absolute;
+  left: 1rem;
+  bottom: 2rem;
+  z-index: 3;
+  pointer-events: none;
+  transform: rotate(-2.66deg);
+}
+.we-are-different-section .organic-icon img {
+  width: 100px;
+  height: auto;
+}
+
 .section_4_our_burgers {
   margin: 2.5rem 0 0 0;
   padding-inline: 1.25rem;
